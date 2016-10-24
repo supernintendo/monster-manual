@@ -1,6 +1,5 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { provideAuth } from "angular2-jwt";
 import { HttpModule } from "@angular/http";
 import { NgSemanticModule } from "ng-semantic";
 
@@ -16,13 +15,7 @@ import { ResultsModule } from "./modules/results/results.module";
         ResultsModule,
         routing
     ],
-    providers: [
-        provideAuth({
-            globalHeaders: [{"Content-type": "application/json"}],
-            newJwtError: true,
-            noTokenScheme: true
-        })
-    ],
+    providers: [],
     declarations: [ AppComponent ],
     bootstrap:    [ AppComponent ],
     schemas: [

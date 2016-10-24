@@ -1,6 +1,5 @@
 import * as express from "express";
 import { join } from "path";
-import * as favicon from "serve-favicon";
 import { json, urlencoded } from "body-parser";
 
 import { entitiesRouter } from "./routes/entities";
@@ -13,7 +12,6 @@ app.use(json());
 app.use(urlencoded({ extended: true }));
 
 // Static assets
-app.use(favicon(join(__dirname, "../../public", "favicon.ico")));
 app.use(express.static(join(__dirname, '../../public')));
 app.use('/dist', express.static(join(__dirname, '../../dist')));
 app.use('/templates', express.static(join(__dirname, '../../client/templates')));
