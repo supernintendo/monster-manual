@@ -1,0 +1,128 @@
+@font-face {
+    font-family: 'Phantom Fingers';
+    src: url('./fonts/Phantom Fingers.ttf')  format('truetype');
+}
+::selection {
+    background: #D4161C;
+}
+::-moz-selection {
+    background: #D4161C;
+}
+body {
+	background: #110909;
+	color: #D4161C;
+    font-size: 1.425rem;
+    letter-spacing: -0.0525rem;
+}
+header {
+	padding-top: 6rem;
+}
+header h1 {
+	font-family: 'Phantom Fingers', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+	font-size: 3rem;
+	line-height: 6rem;
+	text-transform: uppercase;
+}
+a {
+    transition: 250ms color;
+    color: #D4161C;
+    cursor: pointer;
+}
+a:hover {
+    color: #F94413;
+}
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+ul li {
+    animation-name: fade-in;
+    animation-duration: 3200ms;
+}
+ul li:nth-child(1) { animation-duration: 200ms; }
+ul li:nth-child(2) { animation-duration: 400ms; }
+ul li:nth-child(3) { animation-duration: 600ms; }
+ul li:nth-child(4) { animation-duration: 800ms; }
+ul li:nth-child(5) { animation-duration: 1000ms; }
+ul li:nth-child(6) { animation-duration: 1200ms; }
+ul li:nth-child(7) { animation-duration: 1400ms; }
+ul li:nth-child(8) { animation-duration: 1600ms; }
+ul li:nth-child(9) { animation-duration: 1800ms; }
+ul li:nth-child(10) { animation-duration: 2000ms; }
+ul li:nth-child(11) { animation-duration: 2200ms; }
+ul li:nth-child(12) { animation-duration: 2400ms; }
+ul li:nth-child(13) { animation-duration: 2600ms; }
+ul li:nth-child(14) { animation-duration: 2800ms; }
+ul li:nth-child(15) { animation-duration: 3000ms; }
+#loader {
+    animation: grow-width 500ms normal forwards ease-in-out;
+    background-color: #D4161C;
+    position: fixed;
+    height: 4px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.bold {
+    font-weight: bold;
+}
+.center {
+	text-align: center;
+}
+.fade-in {
+	animation-name: fade-in;
+	opacity: 1;
+}
+.fade-to-red {
+	animation-name: fade-to-red;
+	color: #D4161C;
+}
+.page-controls {
+    font-size: 1rem;
+    text-align: right;
+    height: 0;
+    margin: 0 25%;
+    padding: 0 0 2rem 0;
+    width: 50%;
+}
+.page-controls a {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.page-controls .prev {
+    float: left;
+}
+.search {
+	padding-top: 2rem;
+}
+.search input {
+	background: #191111;
+	border: 1px solid #D4161C;
+	color: #D4161C;
+	font-size: 2rem;
+
+}
+.subdued {
+    opacity: 0.7;
+}
+.slow-anim { animation-duration: 5s; }
+.medium-anim { animation-duration: 3s; }
+.fast-anim { animation-duration: 500ms; }
+@keyframes fade-in {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+@keyframes fade-to-red {
+	0% { color: #333333; }
+	25% { color: #333333; }
+	100% { color: #D4161C; }
+}
+@keyframes grow-width {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}

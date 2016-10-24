@@ -1,0 +1,19 @@
+<div *ngIf="loading" id="loader"></div>
+<div class="center container">
+    <search (searchQuery)="searchQuery($event, this.from)"></search>
+    <div class="page-controls container">
+        <a class="prev" *ngIf="shouldShowPrevPage()" (click)="prevPage()">
+            previous
+        </a>
+        <a class="next" *ngIf="shouldShowNextPage()" (click)="nextPage()">
+            next
+        </a>
+    </div>
+    <ul>
+        <li *ngFor="let result of results">
+            <a href="{{ result.link }}" target="_blank">
+                <span class="bold">{{ result.name }}</span>
+            </a> - <span class="subdued">{{ result.description }}</span>
+        </li>
+    </ul>
+</div>
